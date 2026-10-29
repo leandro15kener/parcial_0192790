@@ -1,0 +1,1 @@
+" esta es la pagina base: https://www.figma.com/design/VvyxhceDUQzNZSeOK1aPqJ/Propuesta-dise%C3%B1o-pagina-web-La-trampa--Community-?node-id=0-1&p=f&t=0TJLQOhuCPTQxWPC-0
