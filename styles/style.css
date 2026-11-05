@@ -1,8 +1,461 @@
-:root {
-  --amarillo: #ffe600;
-  --amarillo-titulo: #e6d429;
-  --negro: #111111;
-  --beige: #e8cfa6;
-  --azul: #2f8cff;
+ DISEÑO EXCLUSIVO PARA PC
+========================================== */
+
+/* 1. CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
- 
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #080808;
+    background-image:
+        repeating-radial-gradient(
+            ellipse at 50% 50%,
+            #171717 0px,
+            #090909 3px,
+            #111 5px,
+            #070707 8px
+        );
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ==========================================
+   2. ENCABEZADO
+========================================== */
+
+.encabezado {
+    width: 100%;
+    height: 75px;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: white;
+    font-style: italic;
+    border-bottom: 3px solid #e5d000;
+    padding: 0 10px 4px;
+}
+
+.logo-movil {
+    display: none;
+}
+
+.logo-pc {
+    display: inline;
+}
+
+#menu-check,
+.boton-menu,
+.buscar {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.menu a {
+    font-size: 17px;
+    transition: .3s;
+}
+
+.menu a:not(:last-child)::after {
+    content: " ★";
+    color: #e6d000;
+    font-size: 11px;
+}
+
+.menu a:hover {
+    color: #e6d000;
+}
+
+.buscador {
+    display: flex;
+    width: 145px;
+    height: 30px;
+}
+
+.buscador input {
+    width: 110px;
+    border: none;
+    outline: none;
+    padding: 6px;
+    font-family: inherit;
+}
+
+.buscador button {
+    width: 35px;
+    background: #e6d000;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   3. PORTADA PRINCIPAL
+========================================== */
+
+.portada {
+    width: 92%;
+    max-width: 1450px;
+    margin: 35px auto 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portada h1 {
+    width: 100%;
+    max-width: 950px;
+    line-height: .85;
+    margin-bottom: 48px;
+    font-family: 'Lobster', cursive;
+}
+
+.titulo-blanco {
+    display: block;
+    font-size: 78px;
+    color: white;
+    margin-left: 5%;
+}
+
+.titulo-amarillo {
+    display: block;
+    font-size: 95px;
+    color: #e6d000;
+}
+
+.portada p {
+    width: 100%;
+    max-width: 950px;
+    font-size: 31px;
+    line-height: 1.05;
+    margin-bottom: 0;
+}
+
+.foto-hero {
+    width: 520px;
+    height: 650px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   4. INTRODUCCIÓN
+========================================== */
+
+.intro {
+    width: 96%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 45px 30px 65px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    grid-template-areas:
+        "texto1 foto"
+        "texto2 foto"
+        "texto3 texto3";
+
+    column-gap: 65px;
+    row-gap: 35px;
+
+    align-items: center;
+}
+
+/* Primer texto */
+
+.intro .t1 {
+    grid-area: texto1;
+    width: 100%;
+    text-align: center;
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+/* Segundo texto */
+
+.intro .t2 {
+    grid-area: texto2;
+    width: 100%;
+    text-align: center;
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+/* Párrafo histórico adicional */
+
+.intro .t3 {
+    display: none;
+}
+
+/* Fotografía */
+
+.intro .foto {
+    grid-area: foto;
+
+    width: 100%;
+    height: 590px;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: cover;
+    object-position: center;
+
+    margin: 0;
+}
+
+/* Texto inferior */
+
+.intro .t4 {
+    grid-area: texto3;
+
+    width: 100%;
+    max-width: none;
+
+    text-align: center;
+    font-size: 34px;
+    line-height: 1.2;
+
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   5. SECCIÓN DE PLATOS
+========================================== */
+
+.platos {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 35px 3%;
+}
+
+/* Primer afiche */
+
+.afiche {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 55px;
+}
+
+.afiche img {
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   6. TARJETAS DE COMIDA
+========================================== */
+
+.tarjetas {
+    width: 95%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 130px;
+    row-gap: 50px;
+
+    padding: 20px;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 12px;
+}
+
+.tarjeta.izq {
+    justify-self: start;
+}
+
+.tarjeta.der {
+    justify-self: end;
+}
+
+.tarjeta h3 {
+    color: #e6d000;
+    font-size: 27px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.tarjeta p {
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   7. SEGUNDO AFICHE
+========================================== */
+
+.afiche-final {
+    width: 100%;
+    max-width: 1500px;
+    margin: 50px auto 65px;
+    padding: 0 3%;
+}
+
+.afiche-final .afiche {
+    margin: 0;
+}
+
+.afiche-final img {
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   8. PIE DE PÁGINA
+========================================== */
+
+.pie {
+    width: 100%;
+    min-height: 450px;
+
+    padding: 70px 30px 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.pie p {
+    width: 90%;
+    max-width: 1000px;
+
+    font-size: 42px;
+    line-height: 1.15;
+
+    margin-bottom: 40px;
+}
+
+.boton {
+    display: inline-block;
+
+    background: #e6d000;
+    color: #000;
+
+    padding: 17px 45px;
+
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+
+    margin-bottom: 40px;
+
+    transition: .3s;
+}
+
+.boton:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+.pie h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 43px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.pie hr {
+    width: 160px;
+    height: 3px;
+    background: #e6d000;
+    border: none;
+    margin: 7px 0 15px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.redes a {
+    font-size: 25px;
+    transition: .3s;
+}
+
+.redes a:hover {
+    color: #e6d000;
+}
+
+
+/* ==========================================
+   9. AJUSTE PARA PANTALLAS DE PC GRANDES
+========================================== */
+
+@media (min-width: 1600px) {
+
+    .portada {
+        max-width: 1550px;
+    }
+
+    .intro {
+        max-width: 1700px;
+    }
+
+    .platos {
+        max-width: 1700px;
+    }
+
+    .afiche-final {
+        max-width: 1700px;
+    }
+}
