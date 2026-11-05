@@ -6,29 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sazón Colombiano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
+    <header class="encabezado">
+    <a href="#inicio" class="logo">
+      <span class="logo-movil">sazon colombiano</span>
+      <span class="logo-pc">colombia</span>
+    </a>
+ 
+    
+    <input type="checkbox" id="menu-check">
+    <label for="menu-check" class="boton-menu"><i class="fa-solid fa-bars"></i></label>
 
-    <!-- ENCABEZADO -->
-    <header class="encabezado" id="inicio">
+    <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#contacto">Domicilios</a>
+      <a href="#platos">Menú</a>
+      <a href="#historia">Acerca de nosotros</a>
+    </nav>
 
-        <div class="barra">
-            <a href="#inicio" class="logo">Sazón Colombiano</a>
+   <a href="#" class="buscar" onclick="return false;">
+        <i class="fa-solid fa-magnifying-glass"></i>
+   </a>
 
-            <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#historia">Historia</a>
-                <a href="#comidas">Comidas</a>
-                <a href="#gente">Nuestra gente</a>
-            </nav>
+<!-- Cajita de búsqueda (solo computador) -->
+   <form class="buscador" onsubmit="return false;">
+        <input type="text" placeholder="Buscar">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+   </form>
+ 
 
-            <a href="#colombia" class="boton-pequeno">Conoce más</a>
+    <section class="portada" id="inicio">
+        <h1>
+            <span class="titulo-blanco">Comidas</span>
+            <span class="titulo-amarillo">Colombianas</span>
+        </h1>
+        <p>El auténtico sabor de Colombia, en cada bocado. 🇨🇴</p>
+ 
+        <img class="foto-hero" src="assets/29037.jpg.webp" alt="Bandeja paisa">
+    </section>
+
+    <section class="intro" id="historia">
+        <p class="t1">
+          En Sazón Colombiano, cada plato lleva el auténtico sabor de nuestra tierra,
+          preparado con ingredientes frescos, tradición y mucho amor. Queremos que cada
+          visita sea una oportunidad para compartir, disfrutar y sentirse como en casa.
+        </p>
+ 
+        <p class="t2">
+          Cada receta cuenta una historia, cada sabor nos conecta con nuestras raíces y
+          cada momento en nuestra mesa se convierte en un recuerdo especial. En Sazón
+          Colombiano, ¡siempre habrá un lugar para ti!
+        </p>
+ 
+        <p class="t3">
+          La historia de la gastronomía colombiana es el reflejo de una cultura llena de
+          diversidad y tradición. Desde las arepas y los tamales hasta la bandeja paisa y
+          el ajiaco, cada región aporta sabores únicos que nacen de la mezcla de raíces
+          indígenas, africanas y españolas. A través de sus ingredientes, recetas y
+          costumbres, Colombia comparte con el mundo una parte de su identidad, donde la
+          comida es mucho más que alimento: es unión, memoria y orgullo nacional.
+        </p>
+
+        <img class="foto" src="assets/image 2.png" alt="Desayuno completo con pan tostado y chocolate">
+
+        <p class="t4">
+          De las montañas a las costas, Colombia reúne una riqueza de sabores que cuentan
+          la historia de su gente. Cada plato conserva tradiciones, celebra nuestras raíces
+          y demuestra que la esencia de un país también se descubre alrededor de la mesa.
+        </p>
+    
+    </section>
+
+    <section class="platos" id="platos">
+ 
+        <div class="afiche">
+            <img src="assets/menu colombiano.png" alt="La cocina colombiana: bandeja paisa, ajiaco, sancocho y más">
         </div>
+ 
+        <div class="tarjetas">
+            <div class="tarjeta izq">
+                <h3>Los Grandes Clásicos</h3>
+                <p>
+                  Platos que abrazan. La bandeja paisa que no deja espacio, el ajiaco
+                  bogotano con su aguacate y alcaparras, y el sancocho que reúne a toda
+                  la familia un domingo.
+                </p>
+            </div>
 
-       
+        
+
+            <div class="tarjeta der">
+                <h3>Masa de Maíz, Alma Colombiana</h3>
+                <p>
+                  Arepa · Empanada · Tamales · Patacón<br>
+                  El maíz es el corazón de nuestra cocina. Crujientes, suaves o envueltos
+                  en hoja de plátano: no importa la forma, siempre son la mejor idea.
+                </p>
+            </div>
+ 
+            <div class="tarjeta izq">
+                <h3>Sabor a Fuego</h3>
+                <p>
+                  Lechona · Carne a la llanera · Sobrebarriga · Fritanga<br>
+                  Carnes lentas, doradas y jugosas. Aquí se come con las manos, con ganas
+                  y en buena compañía.
+                </p>
+            </div>
+
+            <div class="tarjeta der">
+                <h3>Mar y Río en tu Mesa</h3>
+                <p>
+                  Pescado frito · Cazuela de mariscos · Sudado de pescado · Arroz con pollo<br>
+                  Frescura, coco y sazón costeña. El mar colombiano servido en cazuela.
+                </p>
+            </div>
+
+            <div class="tarjeta izq">
+                <h3>Para Madrugar y Reconfortar</h3>
+                <p>
+                  Changua · Mote de queso · Cocido boyacense · Hogao · Morcilla<br>
+                  Caldos, sopas y sabores caseros que calientan el alma, sobre todo en las
+                  mañanas frías de los Andes.
+                </p>
+            </div>
+
+            <div class="tarjeta der">
+                <h3>Dulce Final</h3>
+                <p>
+                  Pandebono · Buñuelo · Pandeyuca · Natilla · Obleas con arequipe<br>
+                  Porque ninguna comida colombiana termina sin algo dulce. Calientitos,
+                  esponjosos y adictivos, sobre todo en diciembre.
+                </p>
+            </div>
+        </div>
+    </section>
+
 
 </body>
 </html>
